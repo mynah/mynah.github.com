@@ -1,0 +1,58 @@
+body {
+	background: #46483e;
+	color: #eee;
+	font-size: 12px;
+	line-height: 180%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	margin: 0;
+	padding-top: 40px;
+	border-top: 6px #8cc84b solid;
+}
+
+body.int {
+	padding-top: 49px;
+}
+
+h1 {
+	font-size: 30px;
+	line-height: 36px;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: 180px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+#project {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cell {
+	width: 220px;
+	height: 300px;
+	border: 1px solid gray;
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.cell h1 {
+	margin-top: 50px;
+	color: white;
+}
+
+.description {
+	width: 220px;
+	margin-top: 80px;
+	border-top: 1px dashed gray;
+	padding-top: 10px;
+}
