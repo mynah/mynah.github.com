@@ -1,4 +1,4 @@
-mynah.github.com
+mynah
 ================
 
 www.mynah.org
