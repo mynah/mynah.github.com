@@ -1,1 +1,4 @@
 baseurl: /
+url: www.mynah.org
+paginate: 10
+paginate_path: 'page:num'
