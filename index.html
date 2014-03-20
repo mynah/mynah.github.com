@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<head>
-<title>mynah</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link type="image/x-icon" rel="icon" href="http://www.mynah.org/favicon.ico">
-<link type="image/x-icon" rel="shortcut icon" href="http://www.mynah.org/favicon.ico">
-<link href="style.css" rel="stylesheet" type="text/css">
-</head>
-</head>
-<body class="int">
-	<div id="project">
-		<ul>
-			<li>
-				<div class="cell">
-					<h1>
-						<a href="https://github.com/mynah/oblatum">oblatum</a>
-					</h1>
-					<div class="description">spring jdbc wrapper.</div>
-				</div>
-			</li>
-			<li>
-				<div class="cell">
-					<h1>
-						<a href="https://github.com/mynah/jscompressor">jscompressor</a>
-					</h1>
-					<div class="description">An eclipse plugin for compressing javascript and CSS files.</div>
-				</div>
-			</li>
-			<li>
-				<div class="cell">
-					<h1>
-						<a href="###">?</a>
-					</h1>
-					<div class="description">? is coming.</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-</body>
-</html>
+---
+layout: default
+title: 我的Blog
+---
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+  {% for post in site.posts %}
+    <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
