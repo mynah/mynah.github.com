@@ -6,7 +6,9 @@ tags: [v8, delete]
 ---
 
 v8 delete操作存在的这个问题
+
 ![有帮助的截图](/assets/image/v8delete.jpeg)
+
 测试地址在这里， http://jsperf.com/test-v8-delete，也可以用下面的代码在node中测试
 
 ```javascript
