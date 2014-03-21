@@ -1,0 +1,48 @@
+/* Paginazione */
+
+.pagin {
+	height : 1%;
+	overflow : hidden;
+	margin : 20px 0px;
+}
+.pagin ul {
+	display : inline;
+	float : right;
+	margin-right : 20px;
+	
+}
+.pagin li {
+	display : inline;
+	float : left;
+	margin-right : 5px;
+}
+.pagin a, .pagin span {
+	background : #E7F5F7;
+	color : #605C60;
+	display : block;
+	padding : 2px 5px;
+}
+.pagin .extend{
+	background : none;
+}
+.pagin .back a{
+	background : url(images/p-back.jpg) no-repeat left 1px;
+	height : 14px;
+	width : 11px;
+}
+.pagin .foward a{
+	background : transparent url(images/p-foward.jpg) no-repeat right 1px;
+	height : 14px;
+	width : 11px;
+}
+.pagin .current, .pagin a:hover {
+	background : #008491;
+	color : #FFFFFF;
+	text-decoration : none;
+}
+.pagin .back a:hover {
+	background : transparent url(images/p-back.jpg) no-repeat scroll left 1px;
+}
+.pagin .foward a:hover {
+	background : transparent url(images/p-foward.jpg) no-repeat scroll right 1px;
+}
