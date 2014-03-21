@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="posts">
+    <!-- I primi dieci Post -->
+    <div class="post" id="post-2760">
+        <div class="rings"></div>
+        <div class="post-header">
+            <h1 class="post-title"><a href="a">{{ post.title }}</a></h1>
+            <div class="post-date"><{{ post.date | date_to_string }}</div>
+        </div>
+        <div class="entry">
+            {{ page.content }}
+            <div class="note">
+                <div class="corner">
+                </div>
+                笑嘻嘻笑嘻嘻笑嘻嘻系
+            </div>
+        </div>
+        <div class="post-metadata">
+            <div class="post-cats">
+                分类 ：
+                <a href="###" title="" rel="category tag">Alimentari</a>,
+                <a href="###" title="" rel="category tag">Personali</a>
+                </div>
+        </div>
+        <div class="post-metadata">
+            <div class="post-tags">
+                标签 ：
+                <a href="###" title="" rel="category tag">Alimentari</a>,
+                <a href="###" title="" rel="category tag">Personali</a>,
+                <a href="###" title="" rel="category tag">Personali</a>，
+                <a href="###" title="" rel="category tag">Personali</a>，
+                <a href="###" title="" rel="category tag">Personali</a>
+                {{ page.tags | array_to_sentence_string }}
+                </div>
+        </div>
+    </div>
+    <!-- Fine I primi dieci Post -->
+    <div class="ads right">
+        <h3>I primi dieci è sponsorizzato da:</h3>
+        <div>
+            广告
+        </div>
+        <br class="clearer">
+    </div>
+    <div id="comments">
+
+        <br class="clearer">
+
+        <div class="comments-title-head add-comment">
+            <div class="side-title">
+                <h5 class="comments-title">评论</h5>
+            </div>
+        </div>
+        <div class="commentform">
+           评论区域
+        </div>
+    </div>
+    <div class="ads right">
+        <h3>I primi dieci è sponsorizzato da:</h3>
+        <div>
+            广告
+        </div>
+        <br class="clearer">
+    </div>
+
+</div>
