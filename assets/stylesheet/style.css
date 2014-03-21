@@ -378,9 +378,9 @@ a.about-title{
 .about-content .personal-image {
 	float : left;
 	width : 215px;
-	margin-top : 50px;
-	margin-left : 20px;
-	_margin-left : 5px;
+	//margin-top : 50px;
+	//margin-left : 20px;
+	//_margin-left : 5px;
 	position : relative;
 }
 .chart-content{
@@ -414,10 +414,10 @@ a.about-title{
 	padding : 0px;
 	margin : 0px;
 	float : right;
-	width : 395px;
-	padding-right : 15px;	
-	margin-top : 0px;
-	margin-bottom : 30px;
+	width : 370px;
+	//padding-right : 15px;	
+	//margin-top : 0px;
+	//margin-bottom : 30px;
 }
 .chart-content .text{
 	padding : 0px;
