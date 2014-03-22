@@ -23,7 +23,7 @@
                 <li class="{% if forloop.index % 2 == 1 %}{% else %}right-it{% endif %}">[{{tag[1].size}}]
                     <a href="/tag/#{{tag[0]}}" title="{{tag[0]}}" >
                     {{tag[0]}}{{(forloop.index|modulo:2 == 0)}}
-                    {% if (forloop.index % 2) %}
+                    {% if forloop.index|modulo:2 %}
                     奇数
                     {% else %}
                     偶数
