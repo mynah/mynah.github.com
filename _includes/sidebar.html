@@ -20,9 +20,9 @@
             </div>
             <ul>
                 {% for tag in site.tags %}
-                <li class="{% if tag.index%2 == 1 %}right-it{% endif %}">[{{tag.index(1).length}}] 
-                    <a href="/tag/#{{tag|first|downcase|slugify}}" title="{{tag|first|downcase}}" >
-                    {{tag|first|downcase}}{{tag.index}}
+                <li class="{% if tag.index%2 == 1 %}right-it{% endif %}">[{{tag[1].size}}]
+                    <a href="/tag/#{{tag[0]}}" title="{{tag[0]}" >
+                    {{tag[0]}}{{site.tags.index}}
                     </a>
                 </li>
                 {% endfor %}
