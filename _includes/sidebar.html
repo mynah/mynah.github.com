@@ -20,7 +20,7 @@
             </div>
             <ul>
                 {% for tag in site.tags %}
-                <li class="{% if tag.index%2 == 1 %}right-it{% endif %}">[{{tag.posts.length}}] 
+                <li class="{% if tag.index%2 == 1 %}right-it{% endif %}">[{{tag.post.length}}] 
                     <a href="/tag/#{{tag | downcase | slugify}}" title="{{tag | downcase}}" >
                     {{tag | downcase}}
                     </a>
