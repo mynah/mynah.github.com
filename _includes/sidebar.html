@@ -22,7 +22,7 @@
                 {% for tag in site.tags %}
                 <li class="{% if site.tags.index%2 == 1 %}right-it{% endif %}">[{{tag.index1.length}}] 
                     <a href="/tag/#{{tag|first|downcase|slugify}}" title="{{tag|first|downcase}}" >
-                    {{tag|first|downcase}}
+                    {{tag|first|downcase}}{{tag}}
                     </a>
                 </li>
                 {% endfor %}
