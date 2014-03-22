@@ -5,13 +5,29 @@
             <h2 class="title">公告</h2>
         </div>
         <div class="text">
-            In principio c’era il nulla.<br>
-            Ed era primo in classifica.<br>
-            Poi fu creato il mondo, comparvero gli uomini, vennero scoperte e inventate migliaia e migliaia di cose.<br>
-            Finché un giorno tre strani individui decisero di classificarle tutte.
+            我叫金氧|Lamb.<br>
+            程序员一枚.<br>
+            工作是后端，但是也会关注前端.<br>
+            最近在自己折腾点东西.
         </div>
     </div>
     <ul id="sidebar">
+        <li class="livprinc widget tags">
+            <div class="ads">
+                <div class="side-title">
+                    <h2 class="title">标签</h2>
+                </div>
+            </div>
+            <ul>
+                {% for tag in site.tags %}
+                <li class="{% if tag.index%2 == 1 %}right-it{% endif %}">[{{tag.posts.length}}] 
+                    <a href="/tag/#{{tag | downcase | slugify}}" title="{{tag | downcase}}" >
+                    {{tag | downcase}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
         <li class="livprinc widget categories final">
             <div class="side-title">
                 <h2 class="title">分类</h2>
