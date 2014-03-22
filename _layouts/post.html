@@ -28,17 +28,19 @@ layout: default
               {% endfor %}
               {% endif %}
           </div>
+          <div class="comment">0 评论</div>
       </div>
       <div class="post-metadata">
           <div class="post-tags">
               标签 ：
-              <a href="###" title="" rel="category tag">Alimentari</a>,
-              <a href="###" title="" rel="category tag">Personali</a>,
-              <a href="###" title="" rel="category tag">Personali</a>，
-              <a href="###" title="" rel="category tag">Personali</a>，
-              <a href="###" title="" rel="category tag">Personali</a>
-              {{ page.tags | array_to_sentence_string }}
-              </div>
+              {% if page.tags != empty %}
+              {% for tag in page.tags | sort %}
+              <a href="/tag/#{{tag | downcase | slugify }}" title="{{tag | downcase}}" rel="category tag">
+                {{tag | downcase}}
+              </a>{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+              {% endif %}
+          </div>
       </div>
   </div>
   <!-- Fine I primi dieci Post -->
