@@ -2,7 +2,7 @@
 layout: post
 title: v8 can not handle delete yet
 categories: [技术, 前端]
-tags: [v8, delete]
+tags: [v8, delete, test]
 ---
 
 v8 delete操作存在的这个问题
