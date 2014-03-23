@@ -1,0 +1,28 @@
+---
+layout: post
+title: Android中使用Thread线程会遇到哪些问题？
+categories: [技术]
+tags: [android, thread]
+---
+
+很多初入Android或Java开发的新手对Thread、Looper、Handler和Message仍然比较迷惑，衍生的有 HandlerThread、java.util.concurrent、Task、AsyncTask由于目前市面上的书籍等资料都没有谈到这些问题， 今天就这一问题做更系统性的总结.
+
+Android开发过程中为什么要线程能？
+
+我们创建的 Service、Activity以及Broadcast均是一个主线程处理，这里我们可以理解为UI线程.但是在操作一些耗时操作时，比如I/O读写的 大文件读写，数据库操作以及网络下载需要很长时间，为了不阻塞用户界面，出现ANR的响应提示窗口，这个时候我们可以考虑使用Thread线程来解决.
+
+Android中使用Thread线程会遇到哪些问题？
+
+对于从事过J2ME开发的程序员来说Thread比较简单，直接匿名创建重写run方法，调用start方法执行即可.或者从Runnable接口继 承，但对于Android平台来说UI控件都没有设计成为线程安全类型，所以需要引入一些同步的机制来使其刷新，这点Google在设计Android时 倒是参考了下Win32的消息处理机制.
+
+1. 对于线程中的刷新一个View为基类的界面，可以使用postInvalidate（）方法在线程中来处理，其中还提供了一些重写方法比如 postInvalidate（int left，int top，int right，int bottom） 来刷新一个矩形区域，以及延时执行，比如postInvalidateDelayed（long delayMilliseconds）或postInvalidateDelayed（long delayMilliseconds，int left，int top，int right，int bottom） 方法，其中第一个参数为毫秒，如下：
+
+2. 当然推荐的方法是通过一个Handler来处理这些，可以在一个线程的run方法中调用handler对象的 postMessage或sendMessage方法来实现，Android程序内部维护着一个消息队列，会轮训处理这些，如果你是Win32程序员可以 很好理解这些消息处理，不过相对于Android来说没有提供 PreTranslateMessage这些干涉内部的方法.
+
+3. Looper又是什么呢？ ，其实Android中每一个Thread都跟着一个Looper，Looper可以帮助Thread维护一个消息队列，昨天的问题 Can't create handler inside thread 错误 一文中提到这一概念，但是Looper和Handler没有什么关系，我们从开源的代码可以看到Android还提供了一个Thread继承类 HanderThread可以帮助我们处理，在HandlerThread对象中可以通过getLooper方法获取一个Looper对象控制句柄，我们 可以将其这个Looper对象映射到一个Handler中去来实现一个线程同步机制，Looper对象的执行需要初始化Looper.prepare方法 就是昨天我们看到的问题，同时推出时还要释放资源，使用Looper.release方法.
+
+4.Message 在Android是什么呢？ 对于Android中Handler可以传递一些内容，通过Bundle对象可以封装String、Integer以及Blob二进制对象，我们通过在线 程中使用Handler对象的 sendEmptyMessage或sendMessage方法来传递一个Bundle对象到Handler处理器.对于Handler类提供了重写方法 handleMessage（Message msg） 来判断，通过msg.what来区分每条信息.将Bundle解包来实现Handler类更新UI线程中的内容实现控件的刷新操作.相关的Handler 对象有关消息发送sendXXXX相关方法如下，同时还有postXXXX相关方法，这些和Win32中的道理基本一致，一个为发送后直接返回，一个为处 理后才返回 ：
+
+5. java.util.concurrent对象分析，对于过去从事Java开发的程序员不会对Concurrent对象感到陌生吧，他是JDK 1.5以后新增的重要特性作为掌上设备，我们不提倡使用该类，考虑到Android为我们已经设计好的Task机制，我们这里Android开发网对其不 做过多的赘述，相关原因参考下面的介绍：
+
+6. 在Android中还提供了一种有别于线程的处理方式，就是Task以及AsyncTask，从开源代码中可以看到是针对Concurrent的封装，开 发人员可以方便的处理这些异步任务，具体的Android123在以前的文章中有详细解释，可以使用站内搜索来了解更多.
