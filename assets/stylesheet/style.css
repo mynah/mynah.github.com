@@ -751,7 +751,7 @@ ul.chart li a{
 	
 #comments{
 	font-size : 12px;
-	padding : 10px;
+	padding: 0 40px 0 0;
 	zoom : 1;
 }
 .errorcomment{
