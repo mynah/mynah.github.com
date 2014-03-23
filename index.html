@@ -5,7 +5,7 @@ title: 金氧|Lamb
 <div class="posts">
   {% for post in site.posts %}
   <div class="post">
-      {% if forloop.first||forloop.last %}
+      {% if forloop.first or forloop.last %}
       <div class="rings"></div>
       {% endif %}
       <div class="post-header">
