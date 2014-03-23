@@ -11,12 +11,12 @@ title: 金氧|Lamb 标签
           {% capture previous_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
           {% capture previous_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
           {% if forloop.first %}
-            <h1 id="{{this_year}}{{this_month}}">{{this_year}}{{this_month}}</h1>
+            <h2 id="{{this_year}}{{this_month}}">{{this_year}}{{this_month}}</h2>
             <ul>
           {% else %}
             {% if this_year != previous_year && this_month != previous_month %}
             </ul>
-            <h1 id="{{this_year}}{{this_month}}">{{this_year}}{{this_month}}</h1>
+            <h2 id="{{this_year}}{{this_month}}">{{this_year}}{{this_month}}</h2>
             <ul>
             {% endif %}
           {% endif %}
