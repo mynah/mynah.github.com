@@ -10,7 +10,7 @@ title: 金氧|Lamb 分类
         <ul>
         {% for post in category[1] %}
         <li>[{{tag[1].size}}]
-            <a href="{{post.url}}" title="{{post.title}}" >{{post.title}}</a>
+            {{post.date|date_to_string}}<a href="{{post.url}}" title="{{post.title}}" >{{post.title}}</a>
         </li>
         {% endfor %}
         </ul>

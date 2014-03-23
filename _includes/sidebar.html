@@ -19,7 +19,7 @@
             <ul>
                 {% for tag in site.tags %}
                 <li>[{{tag[1].size}}]
-                    <a href="/tag/#{{tag[0]}}" title="{{tag[0]}}" >
+                    <a href="/tag.html#{{tag[0]}}" title="{{tag[0]}}" >
                     {{tag[0]}}
                     </a>
                 </li>
@@ -33,7 +33,7 @@
             <ul>
                 {% for category in site.categories %}
                 <li>[{{category[1].size}}]
-                    <a href="/category/#{{category[0]}}" title="{{category[0]}}" >
+                    <a href="/category.html#{{category[0]}}" title="{{category[0]}}" >
                     {{category[0]}}
                     </a>
                 </li>
@@ -51,7 +51,7 @@
                     {% capture previous_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
                     {% capture previous_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
                     {% if this_year != previous_year && this_month != previous_month %}
-                      <li>'{{this_year}} <a href="/archive/#{{this_year}}{{this_month}}">{{this_month}}</a></li>
+                      <li>'{{this_year}} <a href="/archive.html#{{this_year}}{{this_month}}">{{this_month}}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
