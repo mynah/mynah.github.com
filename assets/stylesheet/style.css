@@ -16,7 +16,7 @@ Author URI: http://resetstudio.it/
 ul, ol, li {
 	list: none;
 	position : relative;
-        list-style : none;
+    list-style : none;
 }
 
 /* Gestione PNG in ie6 */
