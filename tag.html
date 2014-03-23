@@ -1,0 +1,19 @@
+---
+layout: default
+title: 金氧|Lamb 标签
+---
+<div class="posts">
+  <div class="post">
+      <div class="rings"></div>
+      {% for tag in site.tags %}
+        <h2 id="{{tag[0]}}">{{tag[0]}}</h2>
+        <ul>
+        {% for post in tag[1] %}
+        <li>
+            <a href="{{post.url}}" title="{{post.title}}" >{{post.title}}</a>
+        </li>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+  </div>
+</div>
