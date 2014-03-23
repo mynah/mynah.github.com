@@ -936,11 +936,18 @@ input.text-input, .commentform textarea{
 .news .side-title{
 	background : url(images/twitter.png) no-repeat left top;
 }
+.news .github{
+	background : url(images/github.png) no-repeat left top;
+}
+.news .weibo{
+	background : url(images/weibo.png) no-repeat left top;
+}
 .more-read ul, .news ul{
 	width : 260px;
 	height: 280px;
 }
-.more-read ul li a, .last-comment ul li a, .news ul li a{
+/* hack duoshuo delete .last-comment ul li a */
+.more-read ul li a, .news ul li a{
 	width : 240px;
 	height : 59px;
 	border-bottom : 1px solid rgb(95,97,67);	
@@ -954,6 +961,10 @@ input.text-input, .commentform textarea{
 }
 .more-read ul li a:hover, .news ul li a:hover{
 	background : rgb(50,53,27);
+}
+.news a{
+	color : #fff;
+	font-size : 25px;
 }
 .more-read ul li a strong{
 	color : #fff;
