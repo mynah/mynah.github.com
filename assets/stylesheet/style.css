@@ -340,7 +340,7 @@ a.about-title{
 .archive .side-title{
 	background : url(images/archivio.png) no-repeat left top;
 }
-.ads-google .side-title{
+.tag .side-title{
 	background : url(images/ads.png) no-repeat left top;
 }
 .last-comment .side-title, #comments .side-title {
@@ -472,8 +472,8 @@ ul.chart li a{
 	_width : 127px;
 	padding-top : 3px;
 	height : 18px;
-	padding-left : 25px;
-	_padding-left : 25px;
+	//padding-left : 25px;
+	//_padding-left : 25px;
 }
 .right-it{
 	_padding-left : 0px !important;
@@ -551,7 +551,9 @@ ul.chart li a{
 	left : -87px;
 	top : 87px;	
 }
-
+#sidebar ul{
+	padding : 0px 25px;
+}
 /* Pannello ricerca */
 
 .search {
