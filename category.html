@@ -1,19 +1,10 @@
 ---
 layout: default
-title: 金氧|Lamb 分类
+title: 閲戞哀|Lamb 鍒嗙被
 ---
-<div class="posts">
-  <div class="post">
-      <div class="rings"></div>
-      {% for category in site.categories %}
-        <h2 id="{{category[0]}}">{{category[0]}}</h2>
-        <ul>
-        {% for post in category[1] %}
-        <li>
-            {{post.date|date_to_string}}<a href="{{post.url}}" title="{{post.title}}" >{{post.title}}</a>
-        </li>
-        {% endfor %}
-        </ul>
-      {% endfor %}
-  </div>
-</div>
+{% for category in site.categories %}
+{{category[0]}}
+    {% for post in category[1] %}
+    {{post.date|date_to_string}}{{post.title}}
+    {% endfor %}
+{% endfor %}
