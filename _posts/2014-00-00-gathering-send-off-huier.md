@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 大连，小聚，黑鱼，两斤半，嘎嘎，爽！
+title: 大连，小聚，黑鱼，两斤半，嘎嘎，爽
 categories: [生活]
 tags: [聚会, 大连]
 ---
