@@ -3,7 +3,7 @@ layout: default
 title: 金氧|Lamb
 ---
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <div class="post">
       {% if forloop.first or forloop.last %}
       <div class="rings"></div>
