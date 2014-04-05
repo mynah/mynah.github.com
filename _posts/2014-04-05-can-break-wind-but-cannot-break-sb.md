@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 消除你对Wind.js的疑虑
+title: 防风，但不防傻逼
 categories: [生活, 工作]
 tags: [工作]
 ---
