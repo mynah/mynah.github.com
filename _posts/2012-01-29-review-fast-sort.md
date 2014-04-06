@@ -8,7 +8,8 @@ tags: [算法, 排序]
 	package com.test;
  
 	public class Sort {
-        public static void QuickSort(Comparable[] data, int low, int high) { // 对R[low..high]快速排序
+	    // 对R[low..high]快速排序
+        public static void QuickSort(Comparable[] data, int low, int high) { 
             int pivotpos; // 划分后的基准记录的位置
      
             if (low < high) {// 仅当区间长度大于1时才须排序
