@@ -44,3 +44,19 @@ mongodb默认的数据保存路径是/data/db/，默认端口号为27017。如�
 	or
 	db.shutdownServer({force : true, timeoutsec : 5})
 	
+Window下面以后台服务的方式启动可以使用下面的命令添加服务，配置文件的内容同mac下的
+
+	sc create MongoDB binPath= "\"%MONGO_HOME%\bin\mongod.exe\" --service --config=\"%MONGO_HOME%\mongod.cfg\"" DisplayName= "MongoDB" start= "auto"
+
+如果成功看到
+
+	[SC] CreateService SUCCESS
+
+服务安装成功后可以使用命名启动也可以手动启动
+
+	net start MongoDB
+
+想删除服务可以使用如下命令
+
+	sc delete "MongoDB"
+
