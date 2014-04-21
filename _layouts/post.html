@@ -22,7 +22,7 @@ layout: default
               分类 ：
               {% if page.categories != empty %}
               {% for category in page.categories | sort %}
-              <a href="/category/#{{category}}" title="{{category}}" rel="category tag">
+              <a href="/category.html#{{category}}" title="{{category}}" rel="category tag">
                 {{category|downcase}}
               </a>{% unless forloop.last %}, {% endunless %}
               {% endfor %}
@@ -35,7 +35,7 @@ layout: default
               标签 ：
               {% if page.tags != empty %}
               {% for tag in page.tags | sort %}
-              <a href="/tag/#{{tag}}" title="{{tag}}" rel="category tag">
+              <a href="/tag.html#{{tag}}" title="{{tag}}" rel="category tag">
                 {{tag|downcase}}
               </a>{% unless forloop.last %}, {% endunless %}
               {% endfor %}
