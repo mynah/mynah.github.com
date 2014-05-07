@@ -60,3 +60,7 @@ Window下面以后台服务的方式启动可以使用下面的命令添加服�
 
 	sc delete "MongoDB"
 
+单个进程打开的最大文件句柄数量限制的修改，在/etc/profile文件最下面添加命令
+
+	ulimit -n 1024
+	
